@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Foodfun | Updated design + tailwind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    .preloader{
+      background-color: rgba(0,0,0,.5);
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      position: fixed;
+    }
+    .preloader > div{
+      background-color: rgb(245,158,11);
+      -webkit-border-radius: 9999px;
+      -moz-border-radius: 9999px;
+      border-radius: 9999px;
+      -webkit-animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+      -moz-animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+      -o-animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+      animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+
+      -webkit-transform-origin: top;
+      -moz-transform-origin: top;
+      -ms-transform-origin: top;
+      -o-transform-origin: top;
+      transform-origin: top;
+      width: 40px;
+      width: 2.5rem;
+      height: 40px;
+      height: 2.5rem;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Marck+Script&family=Merienda:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css'>
+
+  <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+
+<!-- Preloader Starts -->
+<div class="preloader">
+  <div></div>
+</div>
+<!-- Preloader End -->
+
+<!-- Header Area Starts -->
+<header class="bg-slate-300/[.5] fixed font-cursive-merie left-0 lg:-translate-x-1/2 lg:left-1/2 lg:mx-auto lg:transform lg:translate-y-0 lg:w-4/5 ml-4 px-0 py-1 rounded shadow-sm top-0 w-56 xl:w-11/12 z-[20]">
+  <div class="mx-4 lg:flex lg:items-center">
+    <div class="flex items-center justify-between">
+      <div class="lg:shrink-0">
+        <a href="index.html"><img src="img/logo.png" alt="logo" class="h-auto lg:m-0 lg:p-2 m-auto max-w-[100px] min-w-[90px] px-2 py-2" /></a>
+      </div>
+      <div class="nav-ham p-4 lg:hidden cursor-pointer transition ease-in-out duration-75 open">
+        <span class="bg-gray-600 block w-5 h-[3px] my-1 mx-0"></span>
+        <span class="bg-gray-600 block w-5 h-[3px] my-1 mx-0"></span>
+        <span class="bg-gray-600 block w-5 h-[3px] my-1 mx-0"></span>
+      </div>
+      <div class="nav-ham p-4 lg:hidden cursor-pointer relative transition ease-in-out duration-75 close hidden">
+        <span class="bg-gray-600 block w-5 h-[3px] my-1 mx-0 absolute top-3.5 right-4 transform rotate-45"></span>
+        <span class="bg-gray-600 block w-5 h-[3px] my-1 mx-0  absolute top-3.5 right-4 transform -rotate-45"></span>
+      </div>
+    </div>
+
+    <div class="lg:flex-1 nav-collapse hidden lg:block">
+      <ul class="pb-2 lg:pb-0 lg:flex lg:flex-wrap lg:items-center lg:justify-end">
+        <li class="lg:font-bold lg:px-4 lg:py-2 lg:text-left p-2.5 text-[12.5px] text-right text-xs uppercase transition ease-in-out duration-300 hover:scale-105">
+          <a href=#home>home</a>
+        </li>
+        <li class="lg:font-bold lg:px-4 lg:py-2 lg:text-left p-2.5 text-[12.5px] text-right text-xs uppercase transition ease-in-out duration-300 hover:scale-105">
+          <a href=#about>about</a>
+        </li>
+        <li class="lg:font-bold lg:px-4 lg:py-2 lg:text-left p-2.5 text-[12.5px] text-right text-xs uppercase transition ease-in-out duration-300 hover:scale-105">
+          <a href=#menu>menu</a>
+        </li>
+
+        <li class="lg:font-bold lg:px-4 lg:py-2 lg:text-left p-2.5 text-[12.5px] text-right text-xs uppercase transition ease-in-out duration-300 hover:scale-105">
+          <a href=#testimonial>testimonial</a>
+        </li>
+        <li class="lg:font-bold lg:px-4 lg:py-2 lg:text-left p-2.5 text-[12.5px] text-right text-xs uppercase transition ease-in-out duration-300 hover:scale-105">
+          <a href=#book>book</a>
+        </li>
+        <li class="lg:font-bold lg:px-4 lg:py-2 lg:text-left p-2.5 text-[12.5px] text-right text-xs uppercase transition ease-in-out duration-300 hover:scale-105">
+          <a href=#contact>contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- Header Area End -->
+
+<!-- Banner Area Starts -->
+<section id="home" class="w-full h-screen flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat" style="background-image: url('img/banner-bg.jpg')">
+
+  <h1 class="font-cursive-merie text-white text-center leading-normal text-6xl">
+    Discover the <span class="text-amber-400">flavors</span><br />
+    of <span class="text-amber-400">food</span>fun
+  </h1>
+</section>
+
+<!-- Banner Area End -->
+
+<!-- Welcome Area Starts -->
+<section id="about" class="flex flex-wrap item-center justify-center lg-p-0 lg:justify-between lg:p-0 lg:pt-28 max-w-[960px] mx-auto p-5">
+  <div class="basis-[500px] grow-0 pr-5">
+    <img class="h-auto w-full" src="img/welcome-bg.png" alt="welcome food image" />
+  </div>
+
+  <div class="basis-[400px] grow max-w-[650px] p-5">
+    <h3 class="font-bold font-cursive-merie text-4xl">
+      <span class="text-amber-400 leading-snug">welcome</span> <br /><span class=" leading-normal">to food fun</span>
+    </h3>
+    <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">
+      Created god gathered don't you yielding herb you had. And isn't, god was
+      saw. Dominion. Great sixth for in unto was. Open can't tree am waters
+      brought. Divide after there. Was.
+      <span class="block mt-3"></span>
+      God gathered don't you yielding herb you had. And isn't, god was
+      saw. Dominion. Great sixth for in unto was. Open can't tree waters
+      brought. Divide after there. Was. Created god gathered don't you yielding
+      herb you had. And isn't god.
+    </p>
+    <a href="#" class="inline-block rounded-sm shadow-md mt-7 px-5 py-3 bg-lime-400 uppercase font-sans-monts text-xs font-bold text-slate-900 border border-transparent transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-transparent hover:border-lime-400">book a table</a>
+  </div>
+</section>
+<!-- Welcome Area End -->
+
+<!-- Food Area Starts -->
+
+<section id="menu" class="bg-no-repeat bg-[right_top_15rem] md:bg-right-top pt-8 md:pt-32 w-full"
+style="background-image: url('img/food-bg.png')">
+  <div class="flex flex-col justify-around items-center food-sm:items-start max-w-[980px] mx-auto">
+    <div class="food-sm:text-left m-4 max-w-sm mt-5 p-4 text-center">
+      <h3 class="font-bold font-cursive-merie text-4xl leading-normal capitalize">
+        <span class="text-amber-400 leading-snug">we serve</span> <br /><span class="leading-normal">delicious food</span>
+      </h3>
+      <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">They're fill divide i their yielding our after have him fish on there for greater man moveth, moved Won't together isn't for fly divide mids fish firmament on net.
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center lg:justify-between  mt-5">
+      <div class="max-w-[290px] m-4 shadow-md group transition">
+        <img class="w-full h-auto" src="img/food1.jpg" alt="">
+        <div class="p-7 bg-slate-100 group-hover:bg-amber-400 transition duration-300 min-h-[170px]">
+          <div class="flex flex-wrap justify-between font-bold font-cursive-merie text-lg">
+            <h5 class='p-1 leading-normal capitalize'>Mexican Eggrolls</h5>
+            <span class="text-amber-400 group-hover:text-slate-600 p-1 text-right">$14.50</span>
+          </div>
+          <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Face together given moveth divided form Of Seasons that fruitful.</p>
+        </div>
+      </div>
+
+      <div class="max-w-[290px] m-4 shadow-md group transition">
+        <img class="w-full h-auto" src="img/food2.jpg" alt="">
+        <div class="group p-7 bg-slate-100 group-hover:bg-amber-400 transition duration-300 min-h-[170px]">
+          <div class="flex flex-wrap justify-between font-bold font-cursive-merie text-lg">
+            <h5 class='p-1 leading-normal capitalize'>chicken burger</h5>
+            <span class="text-amber-400 group-hover:text-slate-600 p-1 text-right">$9.50</span>
+          </div>
+          <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Face together given moveth divided form Of Seasons that fruitful.</p>
+        </div>
+      </div>
+
+      <div class="max-w-[290px] m-4 shadow-md group transition">
+        <img class="w-full h-auto" src="img/food3.jpg" alt="">
+        <div class="group p-7 bg-slate-100 group-hover:bg-amber-400 transition duration-300 min-h-[170px]">
+          <div class="flex flex-wrap justify-between font-bold font-cursive-merie text-lg">
+            <h5 class='p-1 leading-normal capitalize'>topu lasange</h5>
+            <span class="text-amber-400 group-hover:text-slate-600 p-1 text-right">$12.50</span>
+          </div>
+          <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Face together given moveth divided form Of Seasons that fruitful.</p>
+        </div>
+      </div>
+
+      <div class="max-w-[290px] m-4 shadow-md group transition">
+        <img class="w-full h-auto" src="img/food4.jpg" alt="">
+        <div class="group p-7 bg-slate-100 group-hover:bg-amber-400 transition duration-300  min-h-[170px]">
+          <div class="flex flex-wrap justify-between font-bold font-cursive-merie text-lg">
+            <h5 class='p-1 leading-normal capitalize'>pepper potatoas</h5>
+            <span class="text-amber-400 group-hover:text-slate-600 p-1 text-right">$14.50</span>
+          </div>
+          <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Face together given moveth divided form Of Seasons that fruitful.</p>
+        </div>
+      </div>
+
+      <div class="max-w-[290px] m-4 shadow-md group transition">
+        <img class="w-full h-auto" src="img/food5.jpg" alt="">
+        <div class="group p-7 bg-slate-100 group-hover:bg-amber-400 transition duration-300  min-h-[170px]">
+          <div class="flex flex-wrap justify-between font-bold font-cursive-merie text-lg">
+            <h5 class='p-1 leading-normal capitalize'>bean salad</h5>
+            <span class="text-amber-400 group-hover:text-slate-600 p-1 text-right">$8.50</span>
+          </div>
+          <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Face together given moveth divided form Of Seasons that fruitful.</p>
+        </div>
+      </div>
+
+      <div class="max-w-[290px] m-4 shadow-md group transition">
+        <img class="w-full h-auto" src="img/food6.jpg" alt="">
+        <div class="group p-7 bg-slate-100 group-hover:bg-amber-400 transition duration-300  min-h-[170px]">
+          <div class="flex flex-wrap justify-between font-bold font-cursive-merie text-lg">
+            <h5 class='p-1 leading-normal capitalize'>beatball hoagie</h5>
+            <span class="text-amber-400 group-hover:text-slate-600 p-1 text-right">$11.50</span>
+          </div>
+          <p class="pt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Face together given moveth divided form Of Seasons that fruitful.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Food Area End -->
+
+<!-- Testimonial Area Starts -->
+
+<section id="testimonial" class="bg-center bg-cover bg-no-repeat mt-28 px-10 py-24 relative w-full z-1" style="background-image: url('img/testimonial-bg.jpg')">
+  <span class="overlay absolute w-full h-full bg-slate-900/70 left-0 top-0 z-n1"></span>
+  <div class="m-4 max-w-md mt-5 p-4 text-center text-white mx-auto">
+    <h3 class="font-bold font-cursive-merie text-4xl leading-normal capitalize">Customer <span class="text-amber-400 leading-snug">says</span> . . .</h3>
+    <p class="pt-2 text-[14px] font-sans-lato text-slate-100 leading-relaxed">Beast kind form divide night above let moveth bearing darkness.</p>
+  </div>
+  <div class="flex flex-wrap justify-center mt-5 owl-carousel testimonial-slider">
+    <div class="bg-white bg-[url('https://preview.colorlib.com/theme/foodfun/assets/images/quote.png.webp')] bg-no-repeat bg-right-top flex flex-wrap flex-col items-start md:flex-row m-5 max-w-[530px] px-6 py-5 rounded h-auto">
+      <div class="mr-6 mb-4 w-[100px] grow-0 shrink-0 rounded-full border border-gray-300 p-0.5">
+        <img src="img/customer1.png" class="w-full h-auto" alt="">
+      </div>
+      <div class="flex-grow flex-shrink basis-auto md:basis-[22rem]">
+        <h5 class='font-cursive-merie text-lg p-1 leading-normal capitalize font-semibold'>adame nesane</h5>
+        <span class="pt-4 text-[14px] text-slate-600 font-sans-lato leading-relaxed"><i>Chief Customer</i></span>
+        <p class="pt-3.5 text-[14px] text-slate-500 font-sans-lato leading-relaxed ">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+      </div>
+    </div>
+    <div class="bg-white bg-no-repeat bg-right-top flex flex-wrap flex-col items-start md:flex-row m-5 max-w-[530px] px-6 py-5 rounded h-auto" style="background-image: url('img/quote.png')">
+      <div class="mr-6 mb-4 w-[100px] grow-0 shrink-0 rounded-full border border-gray-300 p-0.5">
+        <img src="img/customer2.png" class="w-full h-auto" alt="">
+      </div>
+      <div class="flex-grow flex-shrink basis-auto md:basis-[22rem]">
+        <h5 class='font-cursive-merie text-lg p-1 leading-normal capitalize font-semibold'>adame nesane</h5>
+        <span class="pt-4 text-[14px] text-slate-600 font-sans-lato leading-relaxed"><i>Chief Customer</i></span>
+        <p class="pt-3.5 text-[14px] text-slate-500 font-sans-lato leading-relaxed ">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+      </div>
+    </div>
+    <div class="bg-white bg-no-repeat bg-right-top flex flex-wrap flex-col items-start md:flex-row m-5 max-w-[530px] px-6 py-5 rounded h-auto" style="background-image: url('img/quote.png')">
+      <div class="mr-6 mb-4 w-[100px] grow-0 shrink-0 rounded-full border border-gray-300 p-0.5">
+        <img src="img/customer1.png" class="w-full h-auto" alt="">
+      </div>
+      <div class="flex-grow flex-shrink basis-auto md:basis-[22rem]">
+        <h5 class='font-cursive-merie text-lg p-1 leading-normal capitalize font-semibold'>adam nahan</h5>
+        <span class="pt-4 text-[14px] text-slate-600 font-sans-lato leading-relaxed"><i>Chief Customer</i></span>
+        <p class="pt-3.5 text-[14px] text-slate-500 font-sans-lato leading-relaxed ">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Testimonial Area End -->
+
+<!-- Deshes Area Starts -->
+
+<section class="py-32 mx-auto max-w-[960px]">
+  <div class="m-4 max-w-md mt-5 mb-11 p-4 text-center mx-auto">
+    <h3 class="font-bold font-cursive-merie text-4xl leading-normal capitalize">Our <span class="text-amber-400 leading-snug">special</span> dishes</h3>
+    <p class="pt-2 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Beast kind form divide night above let moveth bearing darkness.</p>
+  </div>
+
+  <div class="p-3 flex flex-wrap items-center justify-around">
+    <div class="pb-5 pr-5 basis-[400px] grow shrink max-w-[650px]">
+      <h1 class="relative text-4xl font-semibold font-cursive-merie">01.
+        <span class="absolute top-1/2 left-16 border-t border-slate-500 w-1/2"></span>
+      </h1>
+      <div class="pl-16">
+        <h3 class="font-bold font-cursive-merie text-3xl ">
+          <span class="text-amber-400 leading-snug">Garlic</span> <br /><span class="leading-normal">green beans</span>
+        </h3>
+
+        <p class="mt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.</p>
+        <p class="mt-4 font-bold font-cursive-merie text-2xl text-amber-400 ">$12.00</p>
+        <a href="#">
+          <p class="mt-4 inline-block rounded-sm shadow px-3 py-3 uppercase font-sans-monts text-xs font-bold text-slate-900 transition ease-in-out delay-150 duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-transparent ">book a table <span><i class="fa fa-long-arrow-right"></i></span></p>
+        </a>
+      </div>
+    </div>
+    <div class="basis-[500px] grow-0 mt-5">
+      <img class="w-full h-auto" src="img/deshes1.png" alt="">
+    </div>
+  </div>
+
+  <div class="p-3 mt-10 flex flex-wrap flex-row-reverse items-center justify-around">
+    <div class="pb-5 pr-7 basis-[400px] grow shrink max-w-[650px]">
+      <h1 class="relative text-4xl font-semibold font-cursive-merie text-right mb-3">
+        <span class="absolute top-1/2 right-16 border-t border-slate-500 w-1/2"></span> 02.
+      </h1>
+      <div class="pl-16 text-right">
+        <h3 class="font-bold font-cursive-merie text-3xl ">
+          <span class="text-amber-400 leading-snug">Lemon</span> <br /><span class="leading-normal">rosemary chicken</span>
+        </h3>
+        <p class="mt-4 text-[14px] font-sans-lato text-slate-600 leading-relaxed">Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.</p>
+        <p class="mt-4 font-bold font-cursive-merie text-2xl text-amber-400 ">$26.00</p>
+        <a href="#">
+          <p class="mt-4 inline-block rounded-sm shadow px-3 py-3 uppercase font-sans-monts text-xs font-bold text-slate-900 transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-transparent ">book a table <span><i class="fa fa-long-arrow-right"></i></span></p>
+        </a>
+      </div>
+    </div>
+    <div class="basis-[500px] grow-0 mt-5">
+      <img class="w-full h-auto" src="img/deshes2.png" alt="">
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Deshes Area End -->
+
+<!-- Book Table Area Starts -->
+
+<section id="book" class="py-32 px-4 md:px-32 bg-no-repeat bg-center bg-cover w-full relative z-1 text-center" style="background-image: url('img/table-bg.jpg')">
+  <span class="overlay absolute w-full h-full bg-slate-900/70 left-0 top-0 z-n1"></span>
+    <div class="m-4 max-w-md mt-5 p-4 text-center text-white mx-auto">
+      <h3 class="font-bold font-cursive-merie text-4xl leading-normal capitalize">Book <span class="text-amber-400 leading-snug">your</span> table</h3>
+      <p class="pt-2 text-[14px] font-sans-lato text-slate-100 leading-relaxed">Beast kind form divide night above let moveth bearing darkness.</p>
+    </div>
+
+    <form action="#" class="bg-slate-800/75 border-2 inline-block px-6 py-8 shadow-md">
+      <div class="flex flex-wrap items-center justify-center">
+        <div class="m-3 relative">
+          <span class="absolute top-0 left-0 px-2.5 py-2 text-slate-700"><i class="fa-solid fa-user text-[14px]"></i></span>
+          <input type="text" id="name" class="w-48 rounded pl-8 text-[14px] font-sans-lato text-slate-700 leading-relaxed" placeholder="Your name">
+        </div>
+        <div class="m-3 relative">
+          <span class="absolute top-0 left-0 px-2.5 py-2 text-slate-700"><i class="fa-solid fa-phone text-[14px]"></i></span>
+          <input type="text" id="Phone" class="w-48 rounded pl-8 text-[14px] font-sans-lato text-slate-700 leading-relaxed" placeholder="Phone Number">
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center justify-center">
+        <div class="m-3 relative">
+          <span class="absolute top-0 left-0 px-2.5 py-2 text-slate-700"><i class="fa fa-calendar text-[14px]"></i></span>
+          <input type="text" id="datepicker" class="w-48 md:w-32 rounded pl-8 text-[14px] font-sans-lato text-slate-700 leading-relaxed" placeholder="Date">
+        </div>
+        <div class="m-3 relative">
+          <span class="absolute top-0 left-0 px-2.5 py-2 text-slate-700"><i class="fa-solid fa-clock text-[14px]"></i></span>
+          <input type="text" id="timepicker" class="w-48 md:w-24 rounded pl-8 text-[14px] font-sans-lato text-slate-700 leading-relaxed" placeholder="Time">
+        </div>
+        <div class="m-3 relative">
+          <span class="absolute top-0 left-0 px-2.5 py-2 text-slate-700"><i class="fa-solid fa-border-none text-[14px]"></i></span>
+          <select name="cars" id="cars" class="w-48 md:w-32 rounded pl-8 text-[14px] font-sans-lato text-slate-700 leading-relaxed">
+            <option value="0" disabled>Person</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Person</option>
+            <option value="3">3 Person</option>
+            <option value="4">4 Person</option>
+            <option value="5">5 Person</option>
+            <option value="6">6 Person</option>
+          </select>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#" class="inline-block rounded-sm shadow-md mt-7 px-5 py-3 bg-lime-400 uppercase font-sans-monts text-xs font-bold text-slate-900 border border-transparent transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-transparent hover:border-lime-400 hover:text-slate-100">book a table</a>
+      </div>
+    </form>
+</section>
+
+<!-- Book Table Area End -->
+
+<!-- Footer Area Starts -->
+
+<footer id="contact" class="footer-area bg-slate-800 text-white font-sans-lato">
+  <div class="flex flex-wrap footer-widget justify-between p-3 py-14 max-w-[960px] mx-auto section-padding">
+    <div class="basis-[300px] grow shrink p-5 pr-9 single-widget single-widget1">
+      <a href="#home"><img class="w-36 h-auto" src="img/logo2.png" alt="" /></a>
+      <p class="mt-3 leading-normal">
+        Which morning fourth great won't is to fly bearing
+        man. Called unto shall seed, deep, herb set seed
+        land divide after over first creeping. First
+        creature set upon stars.
+      </p>
+    </div>
+    <div class="single-widget single-widget2 leading-loose p-5 pr-7">
+      <h5 class="mb-2 font-bold font-cursive-merie text-lg capitalize text-amber-400">contact us</h5>
+      <div class="flex items-start">
+        <i class="fa fa-map-marker pr-3 pl-1 pt-2.5"></i>
+        <p>
+          1234 Some St San Francisco, <br />
+          CA 94102, US
+          1.800.123.4567
+        </p>
+      </div>
+      <div class="flex">
+        <i class="fa fa-phone pr-3 pl-1  pt-2.5"></i>
+        <p>(123) 456 78 90</p>
+      </div>
+      <div class="flex">
+        <i class="fa fa-envelope-o pr-3 pl-1 pt-2.5"></i>
+        <p>support@axiomthemes.com</p>
+      </div>
+    </div>
+    <div class="single-widget single-widget3 leading-loose p-5 justify-self-end">
+      <h5 class="mb-2 font-bold font-cursive-merie text-lg capitalize text-amber-400">opening hours</h5>
+      <p>Monday ...................... Closed</p>
+      <p>Tue-Fri .............. 10 am - 12 pm</p>
+      <p>Sat-Sun ............... 8 am - 11 pm</p>
+      <p>Holidays ............. 10 am - 12 pm</p>
+    </div>
+  </div>
+  <div class="footer-copyright py-3 text-white bg-slate-900">
+    <div class="flex flex-wrap items-center max-w-[960px] mx-auto px-3 justify-between">
+      <span class="my-3 mx-5 leading-normal">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <a class="text-cyan-400" href="https://github.com/Asraf2asif" target="_blank">Asraf2asif</a> | Design inspired by
+        <a class="text-cyan-400" href="https://colorlib.com/wp/template/foodfun/" target="_blank">Colorlib</a>
+      </span>
+      <ul class="social-icons flex flex-wrap my-3 mx-5 transition ease-in-out duration-300">
+        <li class="mr-4 my-1">Follow Us:</li>
+        <li class="mr-3 my-1 cursor-pointer border border-transparent hover:border-white hover:rounded-[50%] px-1">
+          <a href="#" class="cursor-pointer"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li class="mr-3 my-1 cursor-pointer border border-transparent hover:border-white hover:rounded-[50%] px-1">
+          <a href="#" class="cursor-pointer"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li class="mr-3 my-1 cursor-pointer border border-transparent hover:border-white hover:rounded-[50%] px-1">
+          <a href="#" class="cursor-pointer"><i class="fa-brands fa-google-plus"></i></a>
+        </li>
+        <li class="mr-3 my-1 cursor-pointer border border-transparent hover:border-white hover:rounded-[50%] px-1">
+          <a href="#" class="cursor-pointer"><i class="fa-brands fa-pinterest"></i></a>
+        </li>
+        <li class="my-1 cursor-pointer border border-transparent hover:border-white hover:rounded-[50%] px-1">
+          <a href="#" class="cursor-pointer"><i class="fa fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer Area End -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+<script src='https://kit.fontawesome.com/7d5e6558a7.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js'></script>
+<script src="script.js"></script>
+</body>
+</html>
